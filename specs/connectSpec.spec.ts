@@ -43,9 +43,9 @@ test.describe.serial("Test scenarios",async()=>{
         await Searchcourse.examine();
         await page.waitForTimeout(3000);
     })
-    test("Course Info 04",async()=>{
-        let Bookdetails= new bookDetails(page);
-        Bookdetails.fill();
-    })
+    // test("Course Info 04",async()=>{
+    //     let Bookdetails= new bookDetails(page);
+    //     Bookdetails.fill();
+    // })
 
 })
