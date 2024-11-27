@@ -8,15 +8,12 @@ export class landingPage{
 
     constructor(page:Page){
         this.page=page;
-        this.pageHeading= page.locator("h1.large-header large-6 columns");
-        this.addCourseBtn= page.locator("a#addCourse");
+        this.pageHeading= page.locator("");
+        this.addCourseBtn= page.locator("");
     }
 
     async check(){
-        //await this.page.waitForTimeout(5000);
-        await expect(this.page).toHaveTitle("McGraw-Hill Connect | My Courses");
-        //console.log(await this.pageHeading.textContent());
-       // await expect(this.pageHeading).toContainText("My courses");
+        await expect(this.page).toHaveTitle("");  
     }
     
 }
