@@ -2,7 +2,7 @@ import { Page,Locator,expect,test} from "@playwright/test";
 import { signInLocator } from "../locators/signinLocator";
 
 export class signIn{
-    url="https://connect.mheducation.com/";
+    url="";
     page:Page;
     email:Locator;
     pwd:Locator;
@@ -25,28 +25,16 @@ export class signIn{
     }
 
     async check(){
-        await expect(this.page).toHaveTitle("Sign In | Connect | McGraw Hill");
+        await expect(this.page).toHaveTitle("");
         await console.log("Landed on Signin page");
     }
-    async fill(){
-        // await this.email.fill("gaayathrim@connect.com");
-        // await this.pwd.fill("Connect5");
-        // await this.signinBtn.click();
-        
-        // await console.log(this.sign.signinLocator.EMAIL);
-        // await console.log(this.sign.signinLocator.PWD);
-        // await console.log(this.sign.signinLocator.BTN);
-
-        
+    async fill(){        
         let a = this.sign.signinLocator.EMAIL;
         let b = this.sign.signinLocator.PWD;
         let c = this.sign.signinLocator.BTN;
-        await this.page.locator(a).type("gaayathrim@connect.com")
-        await this.page.locator(b).type("Connect5");
+        await this.page.locator(a).type("")
+        await this.page.locator(b).type("");
         await this.page.locator(c).click();
-        
-        //this.sign.signinLocator.EMAIL.type("gaayathrim@connect.com")
-
     }
 
 }
