@@ -8,22 +8,20 @@ export class searchCourse{
 
     constructor(page:Page){
         this.page=page;
-        // this.isbn=page.locator("input.form-control mgh-courseSearch-textbox");
-        this.isbn= page.locator("[placeholder='Search title, author, or subject']");
-       // this.searchBtn= page.locator("xpath=//button[@class='mgh-courseSearch-button enable-button']");
-        this.searchBtn=page.locator("button.mgh-courseSearch-button");
-        this.bookisbn=page.locator(".mgh-book-title");
+        this.isbn= page.locator("");
+        this.searchBtn=page.locator("");
+        this.bookisbn=page.locator("");
     }
 
     async fill(){
-        await this.isbn.type("0000006425");
+        await this.isbn.type("");
         await this.searchBtn.click();
     }
 
     async examine(){
         const value=await this.bookisbn.getAttribute('value');
         await console.log(value);
-        await expect(value).toBe("0000006425");
+        await expect(value).toBe("");
         await this.bookisbn.click();
     }
 
